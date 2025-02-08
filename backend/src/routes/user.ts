@@ -1,5 +1,5 @@
 import { Hono } from "hono";
-import { signinSchema, signinType, signupSchema, signupType } from "../validation";
+import { signinSchema, SigninType, signupSchema, SignupType } from "@ismaildevzone/medium-commons";
 import { sign } from "hono/jwt";
 import { getPrisma } from "../index";
 import bcrypt from 'bcryptjs'
@@ -13,7 +13,7 @@ export const userRouter = new Hono<{
 
 // signup route
 userRouter.post('/signup', async (c) => {
-  const body: signupType = await c.req.json()
+  const body: SignupType = await c.req.json()
 
   const { success, data }  = signupSchema.safeParse(body)
   if (!success) {
@@ -50,7 +50,7 @@ userRouter.post('/signup', async (c) => {
 
 // signin route
 userRouter.post('/signin', async (c) => {
-  const body: signinType = await c.req.json()
+  const body: SigninType = await c.req.json()
 
   const { success, data } = signinSchema.safeParse(body)
   if (!success) {

@@ -1,5 +1,5 @@
 import { Hono } from "hono";
-import { createBlogSchema, createBlogType, updateBlogSchema, updateBlogtype, idSchema, idType } from "../validation";
+import { createBlogSchema, CreateBlogType, updateBlogSchema, UpdateBlogtype } from "@ismaildevzone/medium-commons";
 import { getPrisma } from "../index";
 import { verify } from 'hono/jwt'
 
@@ -42,7 +42,7 @@ blogRouter.use('*', async (c, next) => {
 
 // creates new blog
 blogRouter.post('/', async (c) => {
-  const body: createBlogType = await c.req.json()
+  const body: CreateBlogType = await c.req.json()
 
   const { success, data } = createBlogSchema.safeParse(body)
   if (!success) {
@@ -76,7 +76,7 @@ blogRouter.post('/', async (c) => {
 // update data of blog
 // either title or content or thumbnail or everything
 blogRouter.put('/', async (c) => {
-  const body: updateBlogtype = await c.req.json()
+  const body: UpdateBlogtype = await c.req.json()
 
   const { success, data } = updateBlogSchema.safeParse(body)
   if (!success) {
@@ -129,19 +129,14 @@ blogRouter.get('/bulk', async (c) => {
 
 // gets the blog 
 blogRouter.get('/:id', async (c) => {
-  const queryParam: idType = c.req.param("id")
-
-  const { success, data } = idSchema.safeParse(queryParam)
-  if (!success) {
-    return c.json({message: "Invalid data"}, 400)
-  }
+  const id = c.req.param("id")
 
   const prisma = getPrisma(c.env.DATABASE_URL)
 
   try {
     const blog = await prisma.blog.findFirst({
       where: {
-        id: data
+        id
       },
       select: {
         title: true,
