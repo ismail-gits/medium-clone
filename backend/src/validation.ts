@@ -26,6 +26,7 @@ export const updateBlogSchema = z.object({
 
 export const idSchema = z.string()
 
+// type inference in zod
 export type signupType = z.infer<typeof signupSchema> 
 export type signinType = z.infer<typeof signinSchema>
 export type createBlogType = z.infer<typeof createBlogSchema>
