@@ -1,4 +1,3 @@
-
 import { z } from "zod";
 
 export const signupSchema = z.object({
@@ -7,7 +6,6 @@ export const signupSchema = z.object({
   password: z.string().min(6, {message: "Password should of atleast 6 characters"})
 })
 export type SignupType = z.infer<typeof signupSchema> 
-
 
 export const signinSchema = z.object({
   email: z.string().email({message: "Please enter a valid email"}),
