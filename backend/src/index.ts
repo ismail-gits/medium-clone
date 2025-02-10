@@ -4,7 +4,6 @@ import { withAccelerate } from '@prisma/extension-accelerate'
 import { userRouter } from './routes/user'
 import { blogRouter } from './routes/blog'
 
-// binding string type to DATABASE_URL
 const app = new Hono()
 
 // sets the DATABASE_URL as datasourceUrl and returns a new prismaClient

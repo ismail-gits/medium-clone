@@ -51,8 +51,6 @@ blogRouter.post('/', async (c) => {
 
   const prisma = getPrisma(c.env.DATABASE_URL)
 
-  console.log(c.get('jwtPayload').id);
-
   try {
     const response = await prisma.blog.create({
       data: {
