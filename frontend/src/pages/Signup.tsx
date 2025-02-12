@@ -21,11 +21,10 @@ export function Signup() {
     try {
       const response = await axios.post(`${BACKEND_URL}/api/v1/user/signup`, postInputs)
       const token = response.data.token
-      localStorage.setItem('token', token)
-      navigate('/blog')
+      localStorage.setItem('token', "Bearer " + token)
+      navigate('/blogs')
     }
     catch(err) {
-      alert("Email already exists")
       console.log(err);
     }
   }
