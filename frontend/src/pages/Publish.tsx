@@ -12,7 +12,7 @@ export function Publish() {
     <div>
       <PublishAppBar title={title} content={content}/>
       <div className="flex flex-col items-center">
-        <div className="w-screen lg:w-4xl px-10 py-6">
+        <div className="w-screen lg:w-4xl px-10 py-6 pt-24">
           <textarea 
             id="titleArea"
             ref={titleRef}

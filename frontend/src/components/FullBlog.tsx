@@ -3,7 +3,7 @@ import { Avatar } from "./Avatar"
 
 
 export const FullBlog = ({blog}: {blog: BlogType}) => {
-  return <div className="grid lg:grid-cols-7 px-15 py-10 pr-10">
+  return <div className="grid lg:grid-cols-7 px-15 py-10 pr-10 pt-30">
     <div className=" col-span-5">
       <div className="text-6xl font-extrabold">
         {blog.title}

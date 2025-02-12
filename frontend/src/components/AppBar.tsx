@@ -8,7 +8,7 @@ export const AppBar = () => {
     navigate('/publish')
   }
 
-  return <div className="border-b flex justify-between items-center border-gray-200 py-3 px-15">
+  return <div className="fixed top-0 left-0 right-0 down-0 bg-white border-b flex justify-between items-center border-gray-200 py-3 px-16">
     <div className="cursor-pointer font-bold text-3xl">
       <Link to={'/blogs'}>Medium</Link>
     </div>

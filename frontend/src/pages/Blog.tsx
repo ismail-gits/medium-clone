@@ -13,7 +13,7 @@ export function Blog() {
   return <div>
     <AppBar/>
     {(loading) ? 
-      <div className="pt-10 flex justify-between">
+      <div className="pt-30 flex justify-between">
         <div><Skeleton/></div> 
         <div><Skeleton/></div>
       </div> :

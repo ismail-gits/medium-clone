@@ -17,11 +17,11 @@ export function Blogs() {
 
   const { loading, blogs } = useBlogs()
 
-  return <div className="">
+  return <div>
     <div>
       <AppBar/>
     </div>
-    <div className="flex flex-col items-center">
+    <div className="flex flex-col items-center pt-20">
       {(loading) ? 
         (Array.from({length: 5})).map(() => <div className="pt-10 pr-5"><Skeleton/></div>) : 
         blogs.map(blog => <BlogCard 
