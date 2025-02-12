@@ -1,5 +1,5 @@
 import { BlogType } from "../hooks"
-import { Avatar } from "./Avatar"
+import { BigAvatar } from "./BigAvatar"
 
 
 export const FullBlog = ({blog}: {blog: BlogType}) => {
@@ -23,7 +23,7 @@ export const FullBlog = ({blog}: {blog: BlogType}) => {
 
       <div className="pt-4 flex items-center">
         <div>
-          <Avatar authorName={blog.author.name} size={10}/>
+          <BigAvatar authorName={blog.author.name}/>
         </div>
         <div className="pl-4">
           <div className="text-2xl font-bold">

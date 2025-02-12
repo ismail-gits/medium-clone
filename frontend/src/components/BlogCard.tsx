@@ -1,4 +1,4 @@
-import { Avatar } from "./Avatar"
+import { SmallAvatar } from "./SmallAvatar"
 import { Link } from "react-router-dom"
 
 export interface BlogCardType {
@@ -19,7 +19,7 @@ export const BlogCard = ({
   return <div className="border-b border-gray-300 pb-10 pt-8 w-screen md:w-xl text-left px-6 md:px-1">
     <div className="flex items-center space-x-1.5">
       <div>
-        <Avatar authorName={authorName} size={8}/> 
+        <SmallAvatar authorName={authorName}/> 
       </div>
       <div className="">
         {authorName}
