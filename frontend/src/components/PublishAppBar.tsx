@@ -37,7 +37,7 @@ export const PublishAppBar = ({title, content, authorName}: publishType) => {
     </div>
     <div className="cursor-pointer flex">
       <div>
-        <button onClick={onClickHandler} type="button" className="text-white bg-green-500 hover:bg-green-600 focus:outline-none focus:ring-4 focus:ring-gray-300 font-medium rounded-full text-sm px-5 py-2.5 me-2 mb-2 dark:bg-gray-800 dark:hover:bg-gray-700 dark:focus:ring-gray-700 dark:border-gray-700 w-full cursor-pointer">Publish</button>
+        <button onClick={onClickHandler} type="button" className="text-white bg-green-500 hover:bg-green-600 focus:outline-none focus:ring-4 focus:ring-gray-300 font-medium rounded-full text-sm px-5 py-2.5 me-2 mb-2 cursor-pointer">Publish</button>
       </div>
       <div className="pl-10">
         <BigAvatar authorName={authorName}/>

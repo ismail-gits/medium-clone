@@ -18,7 +18,7 @@ export function Publish() {
           <textarea 
             id="titleArea"
             ref={titleRef}
-            className="resize-none block w-full text-5xl font-semibold text-gray-900 dark:placeholder-gray-400 dark:text-white focus:outline-none overflow-hidden" 
+            className="resize-none block w-full text-5xl font-semibold text-gray-900 focus:outline-none overflow-hidden" 
             rows={1} 
             placeholder="Title"
             onChange={(e) => {
@@ -34,7 +34,7 @@ export function Publish() {
           <textarea 
             id="contentArea"
             ref={contentRef}
-            className="resize-none block w-full text-xl text-gray-900 dark:placeholder-gray-400 dark:text-white focus:outline-none overflow-hidden pt-5" 
+            className="resize-none block w-full text-xl text-gray-900 focus:outline-none overflow-hidden pt-5" 
             rows={1} 
             placeholder="Tell your story..."
             onChange={(e) => {
