@@ -5,18 +5,18 @@ import { BigAvatar } from "./BigAvatar"
 export const FullBlog = ({blog}: {blog: BlogType}) => {
   return <div className="grid lg:grid-cols-7 px-15 py-10 pr-10 pt-30">
     <div className=" col-span-5">
-      <div className="text-6xl font-extrabold">
+      <div className="text-3xl md:text-6xl font-extrabold">
         {blog.title}
       </div>
       <div className="text-gray-500 py-3">
         Posted on August 24, 2023
       </div>
-      <div className="text-lg text-gray-700">
+      <div className="md:text-lg text-gray-700">
         {blog.content}
       </div>
     </div>
 
-    <div className="col-span-2 pl-10">
+    <div className="col-span-2 pl-10 hidden lg:block">
       <div className="text-lg font-semibold">
         Author
       </div>

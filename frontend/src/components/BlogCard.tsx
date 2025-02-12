@@ -21,7 +21,7 @@ export const BlogCard = ({
       <div>
         <SmallAvatar authorName={authorName}/> 
       </div>
-      <div className="">
+      <div>
         {authorName}
       </div>
       <div id="dot" className="text-gray-500">{"\u2022"}</div>
@@ -30,7 +30,7 @@ export const BlogCard = ({
       </div>
     </div>
 
-    <div className="font-extrabold text-2xl pt-1 cursor-pointer">
+    <div className="font-extrabold text-xl md:text-2xl pt-1 cursor-pointer">
       <Link to={`/blog/${id}`}>{title}</Link>
     </div>
 
