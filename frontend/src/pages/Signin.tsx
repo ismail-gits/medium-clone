@@ -7,7 +7,7 @@ import { BACKEND_URL } from "../config"
 import { useNavigate } from "react-router-dom"
 import axios from "axios"
 
-export function Signin() {
+export default function Signin() {
   const [ postInputs, setPostInputs ] = useState<SigninType>({
     email: "",
     password: ""

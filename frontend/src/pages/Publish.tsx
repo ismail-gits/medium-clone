@@ -1,7 +1,7 @@
 import { useRef, useState } from "react"
 import { PublishAppBar } from "../components/PublishAppBar";
 
-export function Publish() {
+export default function Publish() {
   const [ title, setTitle ] = useState("")
   const [ content, setContent ] = useState("")
 

@@ -6,9 +6,8 @@ import { InputBox } from "../components/inputBox"
 import axios from "axios"
 import { useNavigate } from "react-router-dom"
 import { BACKEND_URL } from "../config"
-// import { BACKEND_URL } from "../config"
 
-export function Signup() {
+export default function Signup() {
   const [ postInputs, setPostInputs ] = useState<SignupType>({
     email: "",
     name: "",

@@ -6,7 +6,7 @@ import { useNavigate } from "react-router-dom";
 import { useEffect } from "react";
 
 
-export function Blogs() {
+export default function Blogs() {
   const navigate = useNavigate()
 
   const authorName = localStorage.getItem('name')

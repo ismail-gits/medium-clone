@@ -4,7 +4,7 @@ import { Skeleton } from "../components/Skeleton"
 import { FullBlog } from "../components/FullBlog"
 import { AppBar } from "../components/AppBar"
 
-export function Blog() {
+export default function Blog() {
 
   const { id = "" } = useParams()
 
