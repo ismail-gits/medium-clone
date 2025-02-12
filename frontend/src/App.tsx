@@ -4,7 +4,7 @@ import { Signup } from "./pages/Signup"
 import { Blog } from "./pages/Blog"
 import { Blogs } from "./pages/Blogs"
 import { Home } from "./pages/Home"
-import { Publish } from "./pages/publish"
+import { Publish } from "./pages/Publish"
 
 function App() {
   return <>
