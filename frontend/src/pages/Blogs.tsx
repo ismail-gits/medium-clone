@@ -9,6 +9,8 @@ import { useEffect } from "react";
 export function Blogs() {
   const navigate = useNavigate()
 
+  const authorName = localStorage.getItem('name')
+
   useEffect(() => {
     if (!localStorage.getItem('token')) {
       navigate('/signin')
@@ -19,7 +21,7 @@ export function Blogs() {
 
   return <div>
     <div>
-      <AppBar/>
+      <AppBar authorName={authorName || ""}/>
     </div>
     <div className="flex flex-col items-center pt-20">
       {(loading) ? 

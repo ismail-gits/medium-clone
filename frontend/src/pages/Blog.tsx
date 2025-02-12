@@ -11,7 +11,7 @@ export function Blog() {
   const { loading, blog } = useBlog({id})
 
   return <div>
-    <AppBar/>
+    <AppBar authorName={blog.author.name}/>
     {(loading) ? 
       <div className="pt-30 flex justify-between">
         <div><Skeleton/></div> 

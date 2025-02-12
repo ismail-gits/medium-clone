@@ -60,7 +60,12 @@ blogRouter.post('/', async (c) => {
         thumbnail: data.thumbnail
       },
       select: {
-        id: true
+        id: true,
+        author: {
+          select: {
+            name: true
+          }
+        }
       }
     })
     return c.json(response, 200)

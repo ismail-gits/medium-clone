@@ -1,7 +1,7 @@
 import { BigAvatar } from "./BigAvatar"
 import { Link, useNavigate } from "react-router-dom"
 
-export const AppBar = () => {
+export const AppBar = ({authorName}: {authorName: string}) => {
   const navigate = useNavigate()
 
   const onClickHandler = () => {
@@ -17,7 +17,7 @@ export const AppBar = () => {
         <button onClick={onClickHandler} type="button" className="text-white bg-gray-700 hover:bg-gray-900 focus:outline-none focus:ring-4 focus:ring-gray-300 font-medium rounded-full text-sm px-5 py-2.5 me-2 mb-2 dark:bg-gray-800 dark:hover:bg-gray-700 dark:focus:ring-gray-700 dark:border-gray-700 w-full cursor-pointer">Write</button>
       </div>
       <div className="pl-10">
-        <BigAvatar authorName="Peter V"/>
+        <BigAvatar authorName={authorName}/>
       </div>
     </div>
   </div>

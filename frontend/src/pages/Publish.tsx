@@ -8,9 +8,11 @@ export function Publish() {
   const titleRef = useRef<HTMLTextAreaElement>(null)
   const contentRef = useRef<HTMLTextAreaElement>(null)
 
+  const authorName = localStorage.getItem('name')
+
   return <div>
     <div>
-      <PublishAppBar title={title} content={content}/>
+      <PublishAppBar title={title} content={content} authorName={authorName || ""}/>
       <div className="flex flex-col items-center">
         <div className="w-screen lg:w-4xl px-10 py-6 pt-24">
           <textarea 

@@ -19,7 +19,9 @@ export function Signin() {
     try {
       const response = await axios.post(`${BACKEND_URL}/api/v1/user/signin`, postInputs)
       const token = response.data.token
+      const name = response.data.name
       localStorage.setItem('token', "Bearer " + token)
+      localStorage.setItem('name', name)
       navigate('/blogs')
     }
     catch(err) {
