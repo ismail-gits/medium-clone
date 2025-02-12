@@ -1,6 +1,8 @@
 import { Avatar } from "./Avatar"
+import { Link } from "react-router-dom"
 
 interface BlogCardType {
+  id: number,
   authorName: string,
   title: string,
   content: string,
@@ -8,12 +10,13 @@ interface BlogCardType {
 }
 
 export const BlogCard = ({
+  id,
   authorName,
   title,
   content,
   publishedDate
 }: BlogCardType) => {
-  return <div className="border-b border-gray-300 pb-10 pt-8 max-w-xl">
+  return <div className="border-b border-gray-300 pb-10 pt-8 w-screen md:w-xl text-left px-6 md:px-1">
     <div className="flex items-center space-x-1.5">
       <div>
         <Avatar authorName={authorName} size={8}/> 
@@ -28,7 +31,7 @@ export const BlogCard = ({
     </div>
 
     <div className="font-extrabold text-2xl pt-1 cursor-pointer">
-      {title}
+      <Link to={`/blog/${id}`}>{title}</Link>
     </div>
 
     <div className="text-gray-600 pt-1">
