@@ -1,7 +1,7 @@
 import axios from "axios"
 import { BACKEND_URL } from "../config"
-import { BigAvatar } from "./BigAvatar"
 import { Link, useNavigate } from "react-router-dom"
+import { AppBarAvatar } from "./AppBarAvatar"
 
 interface publishType {
   title: string,
@@ -40,7 +40,7 @@ export const PublishAppBar = ({title, content, authorName}: publishType) => {
         <button onClick={onClickHandler} type="button" className="text-white bg-green-500 hover:bg-green-600 focus:outline-none focus:ring-4 focus:ring-gray-300 font-medium rounded-full text-sm px-5 py-2.5 me-2 mb-2 cursor-pointer">Publish</button>
       </div>
       <div className="pl-10">
-        <BigAvatar authorName={authorName}/>
+        <AppBarAvatar authorName={authorName}/>
       </div>
     </div>
   </div>
