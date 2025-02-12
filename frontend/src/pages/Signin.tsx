@@ -32,7 +32,7 @@ export function Signin() {
   return <div className="grid grid-cols-1 lg:grid-cols-2">
     <div className="h-screen flex justify-center flex-col items-center">
       <div>
-        <div className="px-10">
+        <div className="px-5 lg:px-10">
           <AuthHeader title="Welcome back! Sign in" subTitle="Don't have an account?" to="signup" toText="Signup"/>
         </div>
         <div>

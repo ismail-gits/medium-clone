@@ -34,7 +34,7 @@ export function Signup() {
   return <div className="grid grid-cols-1 lg:grid-cols-2">
     <div className="h-screen flex justify-center flex-col items-center">
       <div>
-        <div className="px-10">
+        <div className="px-8 lg:px-10">
           <AuthHeader title="Create an account" subTitle="Already have an account?" to="signin" toText="Signin"/>
         </div>
         <div>

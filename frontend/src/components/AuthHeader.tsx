@@ -9,7 +9,7 @@ interface authHeaderType {
 
 export const AuthHeader = ({title, subTitle, to, toText}: authHeaderType) => {
   return <div className="">
-  <div className="font-extrabold text-4xl">
+  <div className="font-extrabold text-3xl md:text-4xl">
     {title}
   </div>
 
