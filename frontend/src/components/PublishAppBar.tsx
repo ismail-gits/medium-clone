@@ -31,7 +31,7 @@ export const PublishAppBar = ({title, content, authorName}: publishType) => {
     }
   }
 
-  return <div className="fixed top-0 left-0 right-0 down-0 bg-white border-b flex justify-between items-center border-gray-200 py-3 px-50">
+  return <div className="fixed top-0 left-0 right-0 down-0 bg-white border-b flex justify-between items-center border-gray-200 py-3 px-2 md:px-50">
     <div className="cursor-pointer font-bold text-3xl">
       <Link to={'/blogs'}>Medium</Link>
     </div>
