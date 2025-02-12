@@ -3,7 +3,7 @@ import { useEffect, useState } from "react"
 import { BACKEND_URL } from "../config"
 
 export interface BlogType {
-  id: number,
+  id: string,
   title: string,
   content: string,
   author: {
@@ -40,7 +40,14 @@ export const useBlogs = () => {
 
 export const useBlog = ({id}: {id: string}) => {
   const [ loading, setLoading ] = useState(true)
-  const [ blog, setBlog ] = useState<BlogType>()
+  const [ blog, setBlog ] = useState<BlogType>({
+    id: "",
+    title: "",
+    author: {
+      name: ""
+    },
+    content: ""
+  })
 
   useEffect(() => {
     try {

@@ -17,24 +17,20 @@ export function Blogs() {
 
   const { loading, blogs } = useBlogs()
 
-  if (loading) {
-    return <div>
-      <Skeleton/>
-    </div>
-  }
-
   return <div className="">
     <div>
       <AppBar/>
     </div>
     <div className="flex flex-col items-center">
-      {blogs.map(blog => <BlogCard 
-        id={blog.id}
-        authorName={blog.author.name} 
-        title={blog.title}
-        content={blog.content}
-        publishedDate="Dec 3, 2023"
-      />)}
+      {(loading) ? 
+        (Array.from({length: 5})).map(() => <div className="pt-10 pr-5"><Skeleton/></div>) : 
+        blogs.map(blog => <BlogCard 
+          id={blog.id}
+          authorName={blog.author.name} 
+          title={blog.title}
+          content={blog.content}
+          publishedDate="Dec 3, 2023"
+        />)}
     </div>
   </div>
 }

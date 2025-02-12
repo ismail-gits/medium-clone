@@ -6,18 +6,18 @@ import { AppBar } from "../components/AppBar"
 
 export function Blog() {
 
-  const { id } = useParams<{ id: string}>()
+  const { id = "" } = useParams()
 
-  const { loading, blog } = useBlog({id: id ?? ""})
-
-  if (loading) {
-    return <div>
-      <Skeleton/>
-    </div>
-  }
+  const { loading, blog } = useBlog({id})
 
   return <div>
     <AppBar/>
-    <FullBlog blog={blog}/>
+    {(loading) ? 
+      <div className="pt-10 flex justify-between">
+        <div><Skeleton/></div> 
+        <div><Skeleton/></div>
+      </div> :
+      <FullBlog blog={blog}/>
+    }
   </div>
 }

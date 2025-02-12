@@ -1,8 +1,8 @@
 import { Avatar } from "./Avatar"
 import { Link } from "react-router-dom"
 
-interface BlogCardType {
-  id: number,
+export interface BlogCardType {
+  id: string,
   authorName: string,
   title: string,
   content: string,
